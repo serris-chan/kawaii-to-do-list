@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Kawaii To-Do List</title>
+        <link rel="stylesheet" href="styles.css"/>
+    </head>
+    <body>
+        <h1>Kawaii To-Do List</h1>
+        <div id="todo-list">
+            <input type="text" id="new-task" placeholder="Add a cute task!">
+                <select id="icon-select">
+                    <option value="heart">❤️ Heart</option>
+                    <option value="star">⭐ Star</option>
+                    <option value="anime_char">🌸 Anime Char</option>
+                </select>
+                <select id="priority-select">
+                    <option value="low">Low Priority</option>
+                    <option value="medium">Medium Priority</option>
+                    <option value="high">High Priority</option>
+                </select>
+            <button id="add-task">Add</button>
+            <button id="clear-all">Clear All</button>
+            <ul id="tasks"></ul>
+        </div>
+        <div id="pomodoro-timer">
+            <h2>Pomodoro Timer</h2>
+            <div id="timer">25:00</div>
+            <button id="start-timer">Start!</button>
+            <button id="reset-timer">Reset</button>
+            <button id="change-theme">Change Theme</button>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

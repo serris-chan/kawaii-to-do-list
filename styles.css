@@ -1,0 +1,127 @@
+/* Reset some default styles for consistaency*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffe6f2;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures the body takes at least the full viewport height */
+    padding: 20px;
+}
+
+/*Sets the default theme*/
+body.default {
+    background-color: #ffe6f2; /* This keeps the light pink background for the default theme.*/
+}
+
+body.kawaii-pastel {
+    background: linear-gradient(45deg, #ff69b4, #87ceeb); /*Gradiant from pink to light blue. */
+    color: #fff; /*Text color for the better contrast with the gradiant background.*/
+}
+
+h1 {
+    color: #ff69b4;
+}
+
+#todo-list, #pomodoro-timer {
+    margin: 20px 0;
+    padding: 20px;
+    border: 2px dashed #fff0f5;
+}
+
+button {
+    margin: 5px;
+    padding: 10px;
+    background-color: #ffccff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Adds a smooth transition for button hover */
+}
+
+button:hover {
+    background-color: #ff99ff; /* Slightly darker pink on hover for visual feedback */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    cursor: pointer;
+    padding: 5px, 10px;
+    margin: 5px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+li.hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+li.completed {
+    text-decoration: line-through;
+    animation: tada 1s;
+}
+
+/* Styles for notifications */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    background: #ff69b4;
+    color: #fff;
+    box-shadow: 0 2px 5 px rgba(0, 0, 0, 0.2); /* Adding a cute subtle shadow*/
+}
+
+.notification.success {
+    background: #87ceeb;
+}
+
+/* Points Display*/
+#points {
+    font-size: 16px;
+    color: #ff69b4;
+    margin-top: 10px;
+}
+
+/* Style for mood display*/
+.mood-display {
+    font-style: italic;
+    color: #9370DB; /* cute purple color for mood text*/
+}
+
+/* New styles for task priority colors */
+#tasks li {
+    color: inherit;
+}
+
+/* Animation for completed tasks */
+@keyframes tada {
+    from {
+        transform: scale3d(1, 1, 1);
+    }
+    10%, 20% {
+        transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    }
+    30%, 50%, 70%, 90% {
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+    40%, 60%, 80% {
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    }
+    to {
+        transform: scale3d(1, 1, 1);
+    }
+}
